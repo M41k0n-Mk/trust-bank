@@ -1,9 +1,10 @@
 package me.m41k0n.service;
 
+import org.springframework.stereotype.Service;
+import org.springframework.beans.factory.annotation.Autowired;
+
 import me.m41k0n.model.Account;
 import me.m41k0n.repository.AccountRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
 @Service
 public class AccountService {
@@ -27,8 +28,7 @@ public class AccountService {
     }
 
     private void updateAccountFields(Account existingAccount, Account updatedAccount) {
-        existingAccount.setAccountNumber(updatedAccount.getAccountNumber());
-        existingAccount.setOwnerName(updatedAccount.getOwnerName());
+
     }
 
     public void deleteAccount(Long id) {
