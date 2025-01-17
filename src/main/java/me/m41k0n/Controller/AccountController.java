@@ -1,6 +1,7 @@
 package me.m41k0n.Controller;
 
 import me.m41k0n.model.Account;
+import me.m41k0n.model.dto.AccountResponseDTO;
 import me.m41k0n.service.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -12,7 +13,7 @@ public class AccountController {
     private AccountService accountService;
 
     @PostMapping
-    public Account createAccount(@RequestBody Account account) {
+    public AccountResponseDTO createAccount(@RequestBody Account account) {
         return accountService.saveAccount(account);
     }
 
@@ -22,7 +23,7 @@ public class AccountController {
     }
 
     @GetMapping("/{id}")
-    public Account getAccountById(@PathVariable Long id) {
+    public AccountResponseDTO getAccountById(@PathVariable Long id) {
         return accountService.getAccountById(id);
     }
 
