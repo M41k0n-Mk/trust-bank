@@ -10,7 +10,7 @@
         <relativePath/>
     </parent>
     <groupId>me.m41k0n</groupId>
-    <artifactId>trust-bank</artifactId>
+    <artifactId>trust-bank-account-service</artifactId>
     <version>1.0-SNAPSHOT</version>
     <properties>
         <maven.compiler.source>21</maven.compiler.source>
